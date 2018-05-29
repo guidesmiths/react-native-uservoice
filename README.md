@@ -1,2 +1,2 @@
 # react-native-uservoice
-A RN wrapper for the uservoice SDK
+A React native SDK for the uservoice
