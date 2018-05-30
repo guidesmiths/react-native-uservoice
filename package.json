@@ -1,5 +1,5 @@
 {
-  "name": "uservoice-react-native",
+  "name": "react-native-uservoice",
   "version": "0.0.2",
   "description": "sdk react-native user voice",
   "main": "index.js",
