@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/guidesmiths/react-native-uservoice.git"
   },
-  "author": "guidesmiths",
+  "author": "guidesmiths <ruben.romero@guidesmiths.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/guidesmiths/react-native-uservoice/issues"
