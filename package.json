@@ -1,6 +1,6 @@
 {
   "name": "react-native-uservoice",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "sdk react-native user voice",
   "main": "src/index.js",
   "scripts": {
