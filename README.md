@@ -19,6 +19,27 @@ yarn add react-native-uservoice
 ```
 
 ## Usage
+For example
+```js
+     let clientUserVoice = await clientProvider({
+      apiKey: 'xxxxxx',
+      apiSecret: 'xxxxxx',
+      subdomain: 'xxxxx',
+    });
+    clientUserVoice = await clientUserVoice.withoutLogin();
+    const list = await clientUserVoice.topicService.list();
+```
+
+Example redux-saga
 
 ```js
+    let clientUserVoice = yield call(clientProvider, {
+      apiKey: xxxxx,
+      apiSecret: xxxx,
+      subdomain: xxxx,
+      wrapperFetch // Your custom implementation fetch
+    });
+    clientUserVoice = yield call([clientUserVoice, clientUserVoice.withoutLogin]);
+    const list = yield call([clientUserVoice.topicService, clientUserVoice.topicService.list]);
+```
 
