@@ -2,7 +2,7 @@
   "name": "react-native-uservoice",
   "version": "0.0.5",
   "description": "sdk react-native user voice",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
     "test": "mocha --recursive --compilers js:babel-register -r babel-polyfill -b -S",
