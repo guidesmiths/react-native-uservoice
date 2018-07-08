@@ -1,11 +1,5 @@
 /* eslint no-global-assign:0 */
 
-//To capture request in react-native-debugger (browser)
-const GLOBAL = global;
-XMLHttpRequest = GLOBAL.originalXMLHttpRequest ? GLOBAL.originalXMLHttpRequest :
-  GLOBAL.XMLHttpRequest;
-
-
 export default ({ url, method = 'POST', header, body, wrapperFetch }) =>
   new Promise((resolve, reject) => {
     const myHeaders = new Headers(header);
