@@ -4,15 +4,11 @@
   "description": "sdk react-native user voice",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rimraf lib dist es",
+    "clean": "rimraf lib",
     "test": "mocha --recursive --compilers js:babel-register -r babel-polyfill -b -S",
     "lint": "eslint src test build",
-    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/react-native-uservoice.js",
-    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/react-native-uservoice.js",
-    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/react-native-uservoice.js",
-    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/react-native-uservoice.min.js",
-    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-    "prepare": "npm run clean && npm run lint && npm test && npm run build"
+    "build": "babel src --out-dir lib",
+    "prepare": "npm run clean && npm run lint && npm tes && npm build"
   },
   "repository": {
     "type": "git",
@@ -32,26 +28,16 @@
     "url-parse": "1.1.9"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
     "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-react-native": "^4.0.0",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "cross-env": "^5.1.6",
     "eslint": "^4.19.1",
-    "mocha": "^5.2.0",
-    "rollup": "^0.59.4",
-    "rollup-plugin-babel": "^3.0.4",
-    "rollup-plugin-commonjs": "^9.1.3",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.2.1",
-    "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-uglify": "^4.0.0"
+    "mocha": "^5.2.0"
   }
 }
