@@ -10,6 +10,10 @@
     "build": "babel src --out-dir lib",
     "prepare": "npm run clean && npm run lint && npm test && npm build"
   },
+  "files": [
+    "lib",
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/guidesmiths/react-native-uservoice.git"
